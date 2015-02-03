@@ -1,0 +1,11 @@
+
+{% extends 'rango/base.html' %}
+{% block title %} About {% endblock %}
+ 
+{% block body_block %}
+ 
+		<h1> {{ about }} </h1>
+		<img src="{% static 'qods.jpg' %}" alt= "QODS" />
+	<a href='/rango/'>Index</a>"
+	
+   {% endblock %}

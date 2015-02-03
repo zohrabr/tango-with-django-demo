@@ -1,0 +1,26 @@
+
+{% extends 'rango/base.html' %}
+{% block title %} Rango {% endblock %}
+ 
+{% block body_block %}
+       {% if user.is_authenticated %}
+<h1>Rango says... hello {{ user.username }}!</h1>
+
+
+{% else %}
+<h1>Rango says... hello world!</h1>
+
+{% endif %}
+       {% if categories %}
+       	 <ul>
+		{% for c in categories %}
+		   <font color="blue"> <h2>		
+			<li ><a href="/rango/category/{{ c.name }} " > {{ c.name }}</a> </li> </h2> </font>
+		{% endfor %}
+	  </ul>
+		{% else %}
+		<h1> there is no categories </h1>
+		{% endif %}
+        
+	
+   {% endblock %}
